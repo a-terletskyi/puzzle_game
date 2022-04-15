@@ -1,0 +1,122 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: cursive;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    height: 100vh;
+    margin: 0 auto;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    text-align: center;
+}
+
+.timer {
+    font-size: 80px;
+    padding: 45px 0 40px;
+}
+
+.btn {
+    padding: 8px 15px;
+    margin: 10px;
+    color: white;
+    background-color: #d73737;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+}
+
+.btn:disabled {
+    background-color: #db8383;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: #b52f2f;
+}
+
+.btn:active,
+.btn:focus-visible {
+    outline: solid 3px #eb9e9e;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 800px;
+    margin: 0 auto;
+}
+
+.puzzle-area {
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 300px;
+    margin: 35px;
+    background-color: ghostwhite;
+    border-radius: 5px;
+    outline: solid 1px #898383;
+    box-shadow: 0 0 7px 5px #7a7777;
+}
+
+.piece,
+.emptyBox {
+    width: 75px;
+    height: 75px;
+    background-image: url(style/images/mountain.jpg);
+    background-repeat: no-repeat;
+    background-size: 300px;
+}
+
+.emptyBox {
+    background-image: none;
+}
+
+.hoverDrag {
+    background-color: rgba(220, 220, 220, 0.403);
+}
+
+.modal-window {
+    z-index: 99;
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(50 50 50 / 46%);
+}
+
+.modal {
+    width: 500px;
+    height: 174px;
+    padding-top: 35px;
+    margin: 50px auto 0;
+    background-color: ghostwhite;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.modal__text {
+    padding: 20px 0;
+    font-size: 28px;
+    background-color: #fdfdfd;
+    border-top: solid 2px #e5e5e5;
+    border-bottom: solid 2px #e5e5e5;
+
+}
+
+#check_modal {
+    background-color: #217021;
+}
+
+#check_modal:hover {
+    background-color: #1b5a1b;
+}
+
+#check_modal:active {
+    outline: solid 3px #7ebf7e;
+}
