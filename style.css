@@ -6,7 +6,8 @@
 }
 
 .wrapper {
-    height: 100vh;
+    position: relative;
+    min-height: 100vh;
     margin: 0 auto;
     background-color: #8EC5FC;
     background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
@@ -28,10 +29,6 @@
     border-radius: 4px;
 }
 
-.btn:disabled {
-    background-color: #db8383;
-}
-
 .btn:hover {
     cursor: pointer;
     background-color: #b52f2f;
@@ -40,6 +37,10 @@
 .btn:active,
 .btn:focus-visible {
     outline: solid 3px #eb9e9e;
+}
+
+.btn:disabled {
+    background-color: #db8383;
 }
 
 .container {
@@ -60,6 +61,7 @@
     border-radius: 5px;
     outline: solid 1px #898383;
     box-shadow: 0 0 7px 5px #7a7777;
+
 }
 
 .piece,
@@ -83,10 +85,8 @@
     z-index: 99;
     position: absolute;
     display: none;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
+    margin: auto;
     background-color: rgb(50 50 50 / 46%);
 }
 
@@ -101,7 +101,7 @@
 }
 
 .modal__text {
-    padding: 20px 0;
+    padding: 20px 10px;
     font-size: 28px;
     background-color: #fdfdfd;
     border-top: solid 2px #e5e5e5;
@@ -119,4 +119,39 @@
 
 #check_modal:active {
     outline: solid 3px #7ebf7e;
+}
+
+@media screen and (max-width: 800px) {
+    .timer {
+        padding: 10px 0 0;
+        font-size: 50px;
+    }
+
+    .btn {
+        padding: 8px 10px;
+        margin: 5px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .puzzle-area {
+        margin: 15px;
+    }
+
+    .modal-window {
+        overflow: hidden;
+    }
+
+    .modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 90%;
+        transform: translate(-50%, -50%);
+        height: fit-content;
+    }
 }
